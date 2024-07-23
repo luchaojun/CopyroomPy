@@ -14,3 +14,29 @@
 2024-07-23 16:50:34.963 test2.py[11] <module> -> Find Control Timeout(10s): {Name: 'Hints', ControlType: MenuItemControl}
 2024-07-23 16:52:45.593 test2.py[13] <module> -> Find Control Timeout(10s): {Name: 'Hints', ControlType: MenuItemControl}
 2024-07-23 16:53:23.526 test2.py[13] <module> -> Find Control Timeout(10s): {Name: 'Hints', ControlType: MenuItemControl}
+2024-07-23 19:27:58.889 test2.py[13] <module> -> Find Control Timeout(10s): {Name: '支持(S)', ControlType: MenuItemControl}
+2024-07-23 19:39:21.295 test2.py[14] <module> -> Find Control Timeout(10s): {Name: '支持(S)', ControlType: MenuItemControl}
+2024-07-23 19:43:25.710 test2.py[13] <module> -> Find Control Timeout(10s): {Name: '支持(S)', ControlType: MenuItemControl}
+2024-07-23 19:43:58.167 test2.py[13] <module> -> Find Control Timeout(10s): {Name: '支持(S)', ControlType: MenuControl}
+2024-07-23 19:52:45.329 test2.py[14] <module> -> Find Control Timeout(10s): {Name: '上下文', ControlType: MenuControl}
+2024-07-23 20:03:32.428 test2.py[14] <module> -> Find Control Timeout(10s): {Name: '上下文', ControlType: MenuControl}
+2024-07-23 20:30:12.772 test2.py[13] <module> -> Find Control Timeout(10s): {Name: '支持(S)', ControlType: MenuItemControl}
+2024-07-23 20:32:11.941 test2.py[14] <module> -> Find Control Timeout(10s): {ControlType: MenuControl}
+2024-07-23 20:32:37.234 test2.py[14] <module> -> Find Control Timeout(10s): {ControlType: MenuControl}
+2024-07-23 21:15:23.615 notepadtest.py[13] <module> -> Find Control Timeout(10s): {Name: '打开(0)...', ControlType: MenuItemControl}
+2024-07-23 21:18:18.428 notepadtest.py[13] <module> -> Find Control Timeout(10s): {Name: '打开(O)...', ControlType: MenuItemControl}
+2024-07-23 21:22:25.188 notepadtest.py[13] <module> -> Find Control Timeout(10s): {Name: '打开(O)...', ControlType: MenuItemControl}
+2024-07-23 21:23:13.662 notepadtest.py[13] <module> -> Find Control Timeout(10s): {Name: '打开(0)...', ControlType: MenuItemControl}
+2024-07-23 23:48:58.518 notepadtest.py[51] uiAutomationTest -> Find Control Timeout(10s): {Name: '文件名(N):', ControlType: EditControl}
+2024-07-23 23:49:36.550 notepadtest.py[51] uiAutomationTest -> Find Control Timeout(10s): {Name: '文件名(N):', ControlType: EditControl}
+2024-07-23 23:51:30.415 notepadtest.py[51] uiAutomationTest -> Find Control Timeout(10s): {Name: '文件名(N):', ControlType: EditControl}
+2024-07-23 23:52:28.794 notepadtest.py[51] uiAutomationTest -> Find Control Timeout(10s): {Name: '文件名(N):', ControlType: EditControl}
+2024-07-23 23:53:46.937 notepadtest.py[49] uiAutomationTest -> Find Control Timeout(10s): {Name: '打开(O)...', ControlType: MenuItemControl}
+2024-07-23 23:54:46.890 notepadtest.py[48] uiAutomationTest -> Find Control Timeout(10s): {Name: '打开(O)... Ctrl+O', ControlType: MenuItemControl}
+2024-07-23 23:55:13.176 notepadtest.py[48] uiAutomationTest -> Find Control Timeout(10s): {Name: '打开(O)... Ctrl+O', ControlType: MenuItemControl}
+2024-07-23 23:56:09.507 notepadtest.py[49] uiAutomationTest -> Find Control Timeout(10s): {Name: '打开(O)... Ctrl+O', ControlType: MenuItemControl}
+2024-07-23 23:58:17.842 notepadtest.py[45] uiAutomationTest -> Find Control Timeout(10s): {Name: '新文件 1 - Notepad++', ControlType: WindowControl}
+2024-07-23 23:58:39.503 notepadtest.py[50] uiAutomationTest -> Find Control Timeout(10s): {Name: '文件名(N):', ControlType: EditControl}
+2024-07-23 23:59:27.127 notepadtest.py[50] uiAutomationTest -> Find Control Timeout(10s): {Name: '文件名(N):', ControlType: EditControl}
+2024-07-24 00:01:25.688 notepadtest.py[50] uiAutomationTest -> Find Control Timeout(10s): {Name: '文件名(N):', ControlType: EditControl}
+2024-07-24 00:02:17.146 notepadtest.py[50] uiAutomationTest -> Find Control Timeout(10s): {Name: '文件名(N):', ControlType: EditControl}
