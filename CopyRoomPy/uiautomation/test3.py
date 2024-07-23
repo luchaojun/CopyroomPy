@@ -1,0 +1,25 @@
+import uiautomation as auto
+import subprocess
+
+auto.ShowDesktop()
+# subprocess.Popen('C:\\Program Files (x86)\\VMware\\VMware Workstation\\vmware.exe', shell=True)
+subprocess.Popen('notepad.exe', shell=True)
+# window = auto.WindowControl(searchDepth=1, name="VMware Workstation")
+window = auto.WindowControl(searchDepth=1, Name='未命名 - 記事本')
+screenWidth, screenHeight = auto.GetScreenSize()
+window.MoveWindow(screenWidth // 4, screenHeight // 4, screenWidth // 2, screenHeight // 2)
+window.SetActive()
+edit = window.EditControl()
+edit.Click(waitTime=0)
+edit.GetValuePattern().SetValue('hi你好')
+edit.SendKeys('{Ctrl}{End}{Enter}下面开始演示{! 4}{ENTER}', 0.2, 0)
+edit.SendKeys('{Enter 3}0123456789{Enter}', waitTime=0)
+edit.SendKeys('ABCDEFGHIJKLMNOPQRSTUVWXYZ{Enter}', waitTime=0)
+edit.SendKeys('abcdefghijklmnopqrstuvwxyz{Enter}', waitTime=0)
+edit.SendKeys('`~!@#$%^&*()-_=+{Enter}', waitTime=0)
+edit.SendKeys('[]{{}{}}\\|;:\'\",<.>/?{Enter}{Ctrl}a')
+window.CaptureToImage('Notepad.png')
+edit.SendKeys('Image Notepad.png was captured, you will see it later.', 0.05)
+# find menu
+window.MenuItemControl(Name='格式(O)').Click()
+window.MenuItemControl(Name='字型(F)...').Click()

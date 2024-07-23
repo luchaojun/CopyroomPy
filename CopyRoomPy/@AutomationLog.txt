@@ -1,0 +1,16 @@
+2024-07-23 15:55:56.258 test2.py[134] CalcOnWindows10 -> {ClassName: 'ApplicationFrameWindow', Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x0000014611469678>, Desc: 'Calculator Window', ControlType: WindowControl} does not exist.
+2024-07-23 15:56:02.524 test2.py[136] CalcOnWindows10 -> {ClassName: 'ApplicationFrameWindow', Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x0000014611469678>, Desc: 'Calculator Window', ControlType: WindowControl} does not exist.
+2024-07-23 15:56:02.524 test2.py[136] CalcOnWindows10 -> Find Control Timeout(6s): {ClassName: 'ApplicationFrameWindow', Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x0000014611469678>, Desc: 'Calculator Window', ControlType: WindowControl}
+2024-07-23 16:20:29.520 test2.py[10] <module> -> Find Control Timeout(10s): {RegexName: '.* - Notepad', ControlType: WindowControl}
+2024-07-23 16:21:33.778 test2.py[10] <module> -> Find Control Timeout(10s): {RegexName: '.* - Notepad', ControlType: WindowControl}
+2024-07-23 16:22:18.604 test2.py[10] <module> -> Find Control Timeout(10s): {RegexName: '.* - 记事本', ControlType: WindowControl}
+2024-07-23 16:35:27.244 test2.py[11] <module> -> Find Control Timeout(10s): {Name: 'Close Tab', ControlType: MenuItemControl}
+2024-07-23 16:37:36.188 test2.py[11] <module> -> Find Control Timeout(10s): {Name: 'Close Tab\tCtrl+W', ControlType: MenuItemControl}
+2024-07-23 16:38:10.126 test2.py[11] <module> -> Find Control Timeout(10s): {Name: 'Close Tab   Ctrl+W', ControlType: MenuItemControl}
+2024-07-23 16:39:25.807 test2.py[11] <module> -> Find Control Timeout(10s): {Name: 'Exit', ControlType: MenuItemControl}
+2024-07-23 16:40:33.271 test2.py[11] <module> -> Find Control Timeout(10s): {Name: 'Exit', ControlType: MenuItemControl}
+2024-07-23 16:41:50.261 test2.py[11] <module> -> Find Control Timeout(10s): {Name: 'New Window', ControlType: MenuItemControl}
+2024-07-23 16:44:50.870 test2.py[11] <module> -> Find Control Timeout(10s): {Name: 'About WMware Workstation', ControlType: MenuItemControl}
+2024-07-23 16:50:34.963 test2.py[11] <module> -> Find Control Timeout(10s): {Name: 'Hints', ControlType: MenuItemControl}
+2024-07-23 16:52:45.593 test2.py[13] <module> -> Find Control Timeout(10s): {Name: 'Hints', ControlType: MenuItemControl}
+2024-07-23 16:53:23.526 test2.py[13] <module> -> Find Control Timeout(10s): {Name: 'Hints', ControlType: MenuItemControl}

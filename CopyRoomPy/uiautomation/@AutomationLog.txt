@@ -1,0 +1,2 @@
+2024-07-23 16:30:38.338 test3.py[24] <module> -> Find Control Timeout(10s): {Name: 'Format', ControlType: MenuItemControl}
+2024-07-23 16:32:11.819 test3.py[25] <module> -> Find Control Timeout(10s): {Name: '字形(F)...', ControlType: MenuItemControl}
