@@ -1,10 +1,14 @@
-data_str = "M/O: Y87007-1; Model: NLXXAU/AU1(-N02); MO Qty: 101;Line: Line2; P/N: 6-04- 25256 - 470; Type: BIOS; Checksum: 02AC; " \
-           "Position: U37; Nameplate: 25L25673G; Version: 1.07.09; Date: 2024/7/23;Reel Qty:101;" \
-           "Operator:T2405641"
-data_list = data_str.split(";")
-data_dict = {}
-for item in data_list:
-    print(item)
-    key, value = item.split(":")
-    data_dict[key.strip()] = value.strip()
-print(data_dict)
+import uiautomation as auto
+import subprocess
+import pywinauto.mouse as mouse
+
+# auto.ShowDesktop()
+# subprocess.Popen('D:\\StudyFolder\\WorkDocument\\Hi-Lo\\ALL-300G\\ALL-300G.exe', shell=True)
+window = auto.WindowControl(searchDepth=1, Name="ALL-300G")
+# window.SetActive()
+# window.MenuItemControl(searchDepth=2, Name='File').Click()
+# # 移动鼠标到指定坐标（x=100, y=100）
+# mouse.move(coords=(500, 500))
+# window.MenuItemControl(searchDepth=3, Name="Open Job File").Click()
+# window.EditControl(searchDepth=4, Name='文件名(N):').SendKeys("D:\\WorkDocument\\CopyRoomSW\\temp\\a.txt")
+print(window.Exists(20, 0))

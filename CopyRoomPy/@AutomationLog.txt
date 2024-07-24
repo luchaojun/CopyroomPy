@@ -66,3 +66,56 @@
 2024-07-24 15:28:41.791 HeLuoAuto.py[60] uiAutomationTest -> Find Control Timeout(10s): {Name: '檔案名稱(N):', ControlType: EditControl}
 2024-07-24 15:31:02.611 HeLuoAuto.py[60] uiAutomationTest -> Find Control Timeout(10s): {Name: '檔案名稱(N):', ControlType: EditControl}
 2024-07-24 15:59:23.421 HeLuoAuto.py[55] uiAutomationTest -> Find Control Timeout(10s): {Name: 'ALL-300G', ControlType: WindowControl}
+2024-07-24 20:25:19.784 HeLuoAuto.py[55] uiAutomationTest -> Find Control Timeout(10s): {Name: 'ALL-300G', ControlType: WindowControl}
+2024-07-24 20:27:49.432 HeLuoAuto.py[60] uiAutomationTest -> Find Control Timeout(10s): {Name: '文件名(N):', ControlType: EditControl}
+2024-07-24 20:29:45.860 HeLuoAuto.py[55] uiAutomationTest -> Find Control Timeout(10s): {Name: 'File', ControlType: MenuItemControl}
+2024-07-24 20:45:36.568 automation_calculator.py[134] CalcOnWindows10 -> {ClassName: 'ApplicationFrameWindow', Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x000001D7CE3574C0>, Desc: 'Calculator Window', ControlType: WindowControl} does not exist.
+2024-07-24 20:45:37.515 automation_calculator.py[136] CalcOnWindows10 -> {ClassName: 'ApplicationFrameWindow', Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x000001D7CE3574C0>, Desc: 'Calculator Window', ControlType: WindowControl} TraverseControls: 2, SearchTime: 0.927s[20:45:36.588396 - 20:45:37.515448]
+2024-07-24 20:45:38.043 automation_calculator.py[137] CalcOnWindows10 -> {AutomationId: 'TogglePaneButton', ControlType: ButtonControl} TraverseControls: 11, SearchTime: 0.014s[20:45:38.030314 - 20:45:38.043270]
+2024-07-24 20:45:39.080 automation_calculator.py[138] CalcOnWindows10 -> {AutomationId: 'Scientific', ControlType: ListItemControl} TraverseControls: 22, SearchTime: 0.033s[20:45:39.047860 - 20:45:39.080528]
+2024-07-24 20:45:39.830 automation_calculator.py[139] CalcOnWindows10 -> {AutomationId: 'clearButton', ControlType: ButtonControl} TraverseControls: 56, SearchTime: 0.029s[20:45:39.801326 - 20:45:39.830362]
+2024-07-24 20:46:02.839 automation_calculator.py[154] CalcOnWindows10 -> {ClassName: 'ApplicationFrameWindow', Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x000001D7CE3574C0>, Desc: 'Calculator Window', ControlType: WindowControl} does not exist.
+2024-07-24 20:46:02.839 automation_calculator.py[154] CalcOnWindows10 -> Find Control Timeout(6s): {ClassName: 'ApplicationFrameWindow', Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x000001D7CE3574C0>, Desc: 'Calculator Window', ControlType: WindowControl}
+2024-07-24 20:48:10.387 automation_calculator.py[134] CalcOnWindows10 -> {ClassName: 'ApplicationFrameWindow', Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x000001F230CF74C0>, Desc: 'Calculator Window', ControlType: WindowControl} does not exist.
+2024-07-24 20:48:11.338 automation_calculator.py[136] CalcOnWindows10 -> {ClassName: 'ApplicationFrameWindow', Compare: <function CalcOnWindows10.<locals>.<lambda> at 0x000001F230CF74C0>, Desc: 'Calculator Window', ControlType: WindowControl} TraverseControls: 2, SearchTime: 0.947s[20:48:10.392465 - 20:48:11.338384]
+2024-07-24 20:48:11.860 automation_calculator.py[137] CalcOnWindows10 -> {AutomationId: 'TogglePaneButton', ControlType: ButtonControl} TraverseControls: 11, SearchTime: 0.012s[20:48:11.848865 - 20:48:11.860825]
+2024-07-24 20:48:12.756 automation_calculator.py[138] CalcOnWindows10 -> {AutomationId: 'Scientific', ControlType: ListItemControl} TraverseControls: 22, SearchTime: 0.020s[20:48:12.736376 - 20:48:12.756308]
+2024-07-24 20:48:13.558 automation_calculator.py[139] CalcOnWindows10 -> {AutomationId: 'clearButton', ControlType: ButtonControl} TraverseControls: 130, SearchTime: 0.057s[20:48:13.501694 - 20:48:13.558904]
+2024-07-24 20:48:14.853 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:14.910 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:14.910 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:14.910 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:14.911 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:14.911 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:14.911 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:14.911 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:14.911 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:14.911 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:14.912 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:14.912 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:14.912 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:14.912 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:14.912 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:14.912 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:14.912 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:14.913 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:14.913 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:14.913 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:16.250 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:16.251 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:16.251 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:16.253 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:16.253 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:16.254 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:16.254 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:48:16.255 automation_calculator.py[28] Calc -> Can not move cursor. ButtonControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {ControlType: ButtonControl}
+2024-07-24 20:53:56.462 HeLuoAuto.py[58] uiAutomationTest -> Find Control Timeout(10s): {Name: 'Open Job File', ControlType: MenuItemControl}
+2024-07-24 20:55:33.600 HeLuoAuto.py[55] uiAutomationTest -> Find Control Timeout(10s): {Name: 'File', ControlType: MenuItemControl}
+2024-07-24 20:56:24.987 HeLuoAuto.py[58] uiAutomationTest -> Find Control Timeout(10s): {Name: 'Open Job File', ControlType: MenuItemControl}
+2024-07-24 21:05:27.454 HeLuoAuto.py[58] uiAutomationTest -> Find Control Timeout(10s): {Name: 'Open Job File', ControlType: MenuItemControl}
+2024-07-24 21:08:06.213 HeLuoAuto.py[58] uiAutomationTest -> Find Control Timeout(10s): {Name: 'Open Job File', ControlType: MenuItemControl}
+2024-07-24 21:08:43.721 HeLuoAuto.py[58] uiAutomationTest -> Find Control Timeout(10s): {Name: 'Open Job File', ControlType: MenuItemControl}
+2024-07-24 21:14:23.079 HeLuoAuto.py[58] uiAutomationTest -> Find Control Timeout(10s): {Name: 'Open Job File', ControlType: MenuItemControl}
+2024-07-24 21:26:24.145 HeLuoAuto.py[58] uiAutomationTest -> Can not move cursor. MenuItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {Name: 'Open Job File', ControlType: MenuItemControl}
+2024-07-24 21:29:53.577 HeLuoAuto.py[59] uiAutomationTest -> Find Control Timeout(10s): {Name: '文件名(N):', ControlType: EditControl}
+2024-07-24 21:33:38.394 HeLuoAuto.py[58] uiAutomationTest -> Can not move cursor. MenuItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {Name: 'Open Job File', ControlType: MenuItemControl}

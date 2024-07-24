@@ -47,20 +47,20 @@ def showGetInformationDialog(width, height):
 
 def uiAutomationTest(file_name=""):
     auto.ShowDesktop()
-    subprocess.Popen('D:\\WorkDocument\\CopyRoomSW\\Hi-Lo\\ALL-300G\\ALL-300G.exe', shell=True)
-    time.sleep(3)
+    subprocess.Popen('D:\\StudyFolder\\WorkDocument\\Hi-Lo\\ALL-300G\\ALL-300G.exe', shell=True)
     window = auto.WindowControl(searchDepth=1, Name="ALL-300G")
     # # screenWidth, screenHeight = auto.GetScreenSize()
     # # window.MoveWindow(screenWidth // 4, screenHeight // 4, screenWidth // 2, screenHeight // 2)
     window.SetActive()
-    window.MenuItemControl(Name='File').Click()
-    # # 移动鼠标到指定坐标（x=100, y=100）
-    mouse.move(coords=(0, 200))
-    window.MenuItemControl(Name="Open Job File").Click()
-    window.EditControl(Name='檔案名稱(N):').SendKeys("D:\\WorkDocument\\CopyRoomSW\\temp\\"+file_name)
-    window.ButtonControl(Name='開啟(O)').Click()
-    time.sleep(10)
-    openBurn();
+    if window.Exists():
+        window.MenuItemControl(searchDepth=2, Name='File').Click()
+        # 移动鼠标到指定坐标（x=100, y=100）
+        mouse.move(coords=(500, 500))
+        window.MenuItemControl(searchDepth=3, Name="Open Job File").Click()
+        window.EditControl(searchDepth=4, Name='文件名(N):').SendKeys("D:\\WorkDocument\\CopyRoomSW\\temp\\a.txt")
+        window.ButtonControl(searchDepth=4, Name='打开(O)').Click()
+        time.sleep(10)
+    # openBurn();
 
 
 def openBurn():
@@ -68,5 +68,5 @@ def openBurn():
 
 
 if __name__ == "__main__":
-    showGetInformationDialog(400, 150)
-    # uiAutomationTest()
+    # showGetInformationDialog(400, 150)
+    uiAutomationTest()
