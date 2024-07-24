@@ -12,7 +12,14 @@ file_name = ''
 
 def on_enter(event):
     entry = event.widget
-    file_name = entry.get()
+    copyInfo = entry.get()
+    data_list = copyInfo.split(";")
+    data_dict = {}
+    for item in data_list:
+        print(item)
+        key, value = item.split(":")
+        data_dict[key.strip()] = value.strip()
+    file_name = data_dict["M/O"] + "---" + data_dict["Nameplate"] + "---" + data_dict["Checksum"] + ".job";
     root.destroy()
     uiAutomationTest(file_name)
 
@@ -38,21 +45,28 @@ def showGetInformationDialog(width, height):
     root.mainloop()
 
 
-def uiAutomationTest(file_name):
+def uiAutomationTest(file_name=""):
     auto.ShowDesktop()
-    subprocess.Popen('D:\\Software\\Notepad++\\notepad++.exe', shell=True)
-    window = auto.WindowControl(searchDepth=1, Name="新文件 1 - Notepad++ [Administrator]")
-    # screenWidth, screenHeight = auto.GetScreenSize()
-    # window.MoveWindow(screenWidth // 4, screenHeight // 4, screenWidth // 2, screenHeight // 2)
+    subprocess.Popen('D:\\WorkDocument\\CopyRoomSW\\Hi-Lo\\ALL-300G\\ALL-300G.exe', shell=True)
+    time.sleep(3)
+    window = auto.WindowControl(searchDepth=1, Name="ALL-300G")
+    # # screenWidth, screenHeight = auto.GetScreenSize()
+    # # window.MoveWindow(screenWidth // 4, screenHeight // 4, screenWidth // 2, screenHeight // 2)
     window.SetActive()
-    window.MenuItemControl(Name='檔案(F)').Click()
-    # 移动鼠标到指定坐标（x=100, y=100）
+    window.MenuItemControl(Name='File').Click()
+    # # 移动鼠标到指定坐标（x=100, y=100）
     mouse.move(coords=(0, 200))
-    time.sleep(2)
-    window.MenuItemControl(Name="開啟舊檔(O)...	Ctrl+O").Click()
-    window.EditControl(Name='檔案名稱(N):').SendKeys("C:\\Users\\chaojun_Lu\\Desktop\\"+file_name)
+    window.MenuItemControl(Name="Open Job File").Click()
+    window.EditControl(Name='檔案名稱(N):').SendKeys("D:\\WorkDocument\\CopyRoomSW\\temp\\"+file_name)
     window.ButtonControl(Name='開啟(O)').Click()
+    time.sleep(10)
+    openBurn();
+
+
+def openBurn():
+    subprocess.Popen('D:\\WorkDocument\\CopyRoomSW\\Burn_V1.0.1.12 -hl\\Burn\\bin\\Debug\\Burn.exe', shell=True)
 
 
 if __name__ == "__main__":
     showGetInformationDialog(400, 150)
+    # uiAutomationTest()

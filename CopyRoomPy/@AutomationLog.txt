@@ -40,3 +40,29 @@
 2024-07-23 23:59:27.127 notepadtest.py[50] uiAutomationTest -> Find Control Timeout(10s): {Name: '文件名(N):', ControlType: EditControl}
 2024-07-24 00:01:25.688 notepadtest.py[50] uiAutomationTest -> Find Control Timeout(10s): {Name: '文件名(N):', ControlType: EditControl}
 2024-07-24 00:02:17.146 notepadtest.py[50] uiAutomationTest -> Find Control Timeout(10s): {Name: '文件名(N):', ControlType: EditControl}
+2024-07-24 08:23:54.178 notepadtest.py[45] uiAutomationTest -> Find Control Timeout(10s): {Name: '新文件 1 - Notepad++', ControlType: WindowControl}
+2024-07-24 08:26:06.640 notepadtest.py[45] uiAutomationTest -> Find Control Timeout(10s): {Name: '新文件 1 - Notepad++ [administrator]', ControlType: WindowControl}
+2024-07-24 08:26:40.681 notepadtest.py[53] uiAutomationTest -> Find Control Timeout(10s): {Name: '開啟舊檔(O)...\tCtrl+O', ControlType: MenuItemControl}
+2024-07-24 08:27:36.842 notepadtest.py[53] uiAutomationTest -> Find Control Timeout(10s): {Name: '開啟舊檔(O)...   Ctrl+O', ControlType: MenuItemControl}
+2024-07-24 08:31:15.863 notepadtest.py[53] uiAutomationTest -> Find Control Timeout(10s): {Name: '開啟舊檔(O)... Ctrl+O', ControlType: MenuItemControl}
+2024-07-24 08:35:36.025 notepadtest.py[45] uiAutomationTest -> Find Control Timeout(10s): {Name: '新文件 1 - Notepad++ [Administrator]', ControlType: WindowControl}
+2024-07-24 08:36:12.419 notepadtest.py[53] uiAutomationTest -> Find Control Timeout(10s): {Name: '開啟舊檔(O)...\tCtrl+O', ControlType: MenuItemControl}
+2024-07-24 08:59:45.002 notepadtest.py[46] uiAutomationTest -> Find Control Timeout(10s): {Name: '新文件 1 - Notepad++ [Administrator]', ControlType: WindowControl}
+2024-07-24 09:10:28.447 notepadtest.py[46] uiAutomationTest -> Find Control Timeout(10s): {Name: '新文件 1 - Notepad++ [Administrator]', ControlType: WindowControl}
+2024-07-24 09:23:34.150 notepadtest.py[46] uiAutomationTest -> Find Control Timeout(10s): {Name: '新文件 1 - Notepad++ [Administrator]', ControlType: WindowControl}
+2024-07-24 09:28:36.900 notepadtest.py[53] uiAutomationTest -> Find Control Timeout(10s): {Name: '開啟舊檔(O)...\tCtrl+O', ControlType: MenuItemControl}
+2024-07-24 09:31:18.306 notepadtest.py[54] uiAutomationTest -> Find Control Timeout(10s): {Name: '檔案名稱(N):', ControlType: EditControl}
+2024-07-24 09:32:06.541 notepadtest.py[53] uiAutomationTest -> Find Control Timeout(10s): {Name: '開啟舊檔(O)...\tCtrl+O', ControlType: MenuItemControl}
+2024-07-24 09:33:10.618 notepadtest.py[52] uiAutomationTest -> Find Control Timeout(10s): {Name: '開啟舊檔(O)...\tCtrl+O', ControlType: MenuItemControl}
+2024-07-24 09:35:48.956 notepadtest.py[53] uiAutomationTest -> Find Control Timeout(10s): {Name: '檔案名稱(N):', ControlType: EditControl}
+2024-07-24 09:37:06.804 notepadtest.py[53] uiAutomationTest -> Find Control Timeout(10s): {Name: '檔案名稱(N):', ControlType: EditControl}
+2024-07-24 09:37:47.851 notepadtest.py[52] uiAutomationTest -> Find Control Timeout(10s): {Name: '檔案名稱(N):', ControlType: EditControl}
+2024-07-24 09:41:38.272 notepadtest.py[46] uiAutomationTest -> Find Control Timeout(10s): {Name: '新文件 1 - Notepad++ [Administrator]', ControlType: WindowControl}
+2024-07-24 10:13:20.281 notepadtest.py[46] uiAutomationTest -> Find Control Timeout(10s): {Name: '新文件 1 - Notepad++ [Administrator]', ControlType: WindowControl}
+2024-07-24 10:29:15.829 notepadtest.py[46] uiAutomationTest -> Find Control Timeout(10s): {Name: '新文件 1 - Notepad++ [Administrator]', ControlType: WindowControl}
+2024-07-24 11:24:52.376 HeLuoAuto.py[54] uiAutomationTest -> Find Control Timeout(10s): {Name: '新文件 1 - Notepad++ [Administrator]', ControlType: WindowControl}
+2024-07-24 13:03:20.657 HeLuoAuto.py[54] uiAutomationTest -> Find Control Timeout(10s): {Name: '新文件 1 - Notepad++ [Administrator]', ControlType: WindowControl}
+2024-07-24 15:06:37.806 HeLuoAuto.py[60] uiAutomationTest -> Can not move cursor. MenuItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {Name: 'Open Job File', ControlType: MenuItemControl}
+2024-07-24 15:28:41.791 HeLuoAuto.py[60] uiAutomationTest -> Find Control Timeout(10s): {Name: '檔案名稱(N):', ControlType: EditControl}
+2024-07-24 15:31:02.611 HeLuoAuto.py[60] uiAutomationTest -> Find Control Timeout(10s): {Name: '檔案名稱(N):', ControlType: EditControl}
+2024-07-24 15:59:23.421 HeLuoAuto.py[55] uiAutomationTest -> Find Control Timeout(10s): {Name: 'ALL-300G', ControlType: WindowControl}
