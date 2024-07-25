@@ -119,3 +119,15 @@
 2024-07-24 21:26:24.145 HeLuoAuto.py[58] uiAutomationTest -> Can not move cursor. MenuItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {Name: 'Open Job File', ControlType: MenuItemControl}
 2024-07-24 21:29:53.577 HeLuoAuto.py[59] uiAutomationTest -> Find Control Timeout(10s): {Name: '文件名(N):', ControlType: EditControl}
 2024-07-24 21:33:38.394 HeLuoAuto.py[58] uiAutomationTest -> Can not move cursor. MenuItemControl's BoundingRectangle is (0,0,0,0)[0x0]. SearchProperties: {Name: 'Open Job File', ControlType: MenuItemControl}
+2024-07-25 10:00:15.242 HeLuoAuto.py[56] uiAutomationTest -> Find Control Timeout(10s): {Name: 'File', ControlType: MenuItemControl}
+2024-07-25 10:41:54.845 HeLuoAuto.py[59] uiAutomationTest -> Find Control Timeout(10s): {Name: 'File', ControlType: MenuItemControl}
+2024-07-25 10:45:03.183 HeLuoAuto.py[59] uiAutomationTest -> Find Control Timeout(10s): {Name: 'File', ControlType: MenuItemControl}
+2024-07-25 11:23:21.608 HeLuoAuto.py[59] uiAutomationTest -> Find Control Timeout(10s): {Name: 'File', ControlType: MenuItemControl}
+2024-07-25 12:53:00.275 printtest.py[10] <module> -> Find Control Timeout(10s): {Name: 'Auto', ControlType: WindowControl}
+2024-07-25 13:02:50.008 printtest.py[10] <module> -> Find Control Timeout(10s): {RegexName: '.*.job', ControlType: WindowControl}
+2024-07-25 13:05:34.696 printtest.py[10] <module> -> Find Control Timeout(10s): {Name: 'Auto', ControlType: WindowControl}
+2024-07-25 13:10:04.741 printtest.py[10] <module> -> Find Control Timeout(10s): {Name: 'Auto', ControlType: WindowControl}
+2024-07-25 13:12:08.084 HeLuoAuto.py[55] uiAutomationTest -> Find Control Timeout(10s): {Name: 'ALL-300G', ControlType: WindowControl}
+2024-07-25 13:47:44.234 HeLuoAuto.py[67] uiAutomationTest -> Find Control Timeout(10s): {Name: 'File', ControlType: MenuItemControl}
+2024-07-25 13:48:02.598 HeLuoAuto.py[67] uiAutomationTest -> Find Control Timeout(10s): {Name: 'File', ControlType: MenuItemControl}
+2024-07-25 13:50:03.661 HeLuoAuto.py[67] uiAutomationTest -> Find Control Timeout(10s): {Name: 'File', ControlType: MenuItemControl}
