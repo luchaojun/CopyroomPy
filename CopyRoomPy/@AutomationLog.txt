@@ -131,3 +131,6 @@
 2024-07-25 13:47:44.234 HeLuoAuto.py[67] uiAutomationTest -> Find Control Timeout(10s): {Name: 'File', ControlType: MenuItemControl}
 2024-07-25 13:48:02.598 HeLuoAuto.py[67] uiAutomationTest -> Find Control Timeout(10s): {Name: 'File', ControlType: MenuItemControl}
 2024-07-25 13:50:03.661 HeLuoAuto.py[67] uiAutomationTest -> Find Control Timeout(10s): {Name: 'File', ControlType: MenuItemControl}
+2024-07-26 08:54:54.109 HeLuoAuto.py[65] uiAutomationAll300G -> Find Control Timeout(10s): {Name: 'ALL-300G', ControlType: WindowControl}
+2024-07-26 08:55:52.943 HeLuoAuto.py[71] uiAutomationAll300G -> Find Control Timeout(10s): {Name: '打开(O)', ControlType: ButtonControl}
+2024-07-26 11:58:46.702 HeLuoAuto.py[87] uiAutomationBurn -> Find Control Timeout(10s): {AutomationId: 'but_Homing', ControlType: ButtonControl}

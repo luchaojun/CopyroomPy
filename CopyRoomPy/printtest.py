@@ -1,23 +1,10 @@
-import uiautomation as auto
-import subprocess
-import pywinauto.mouse as mouse
-import os
-import psutil
-import time
-
-
-"""
-关闭已打开的
-"""
-auto_window = auto.WindowControl(searchDepth=2, Name='Auto')
-print(auto_window.Exists())
-auto_window.GetWindowPattern().Close()
-
-time.sleep(1)
-
-job_window = auto.WindowControl(searchDepth=1, RegexName='.*.job')
-print(job_window.Exists())
-job_window.GetWindowPattern().Close()
-
-
-
+data_dict = {}
+str = "a: 1; b: 2; c: 3; d: 4;"
+data_list = str.split(";")
+print(len(data_list))
+for item in data_list:
+    if not item == "":
+        print(item)
+        key, value = item.split(":")
+        data_dict[key.strip()] = value.strip()
+print(data_dict["c"])
