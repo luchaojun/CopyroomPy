@@ -7,11 +7,29 @@ from tkinter import font
 import comtypes.stream
 import os
 import threading
+import datetime
 
 root = tk.Tk()
 file_name = ''
 data_dict = {}
 
+
+#创建一个Log File
+current_date = datetime.datetime.now().strftime('%Y-%m-%d')
+log_date = datetime.datetime.now().strftime('%Y-%m-%d-%H_%M_%S')
+# 创建以当前日期命名的文件夹
+if not os.path.exists(current_date):
+    os.makedirs(current_date)
+# 将测试数据保存到当前日期的文件夹中
+file_name = "IC_Burn_Label_Test_Record_" + log_date + ".txt"
+file_path = os.path.join(current_date, file_name)
+
+
+#记录log的信息
+def record_test_log(test_data):
+    # 获取当前日期并格式化为字符串
+    with open(file_path, 'a', encoding="utf-8") as f:
+        f.write(test_data+'\n')
 
 """
 扫码后点击回车驱动事件, 对扫码枪带出来的数据进行解析
@@ -27,7 +45,7 @@ def on_enter(event):
             print(item)
             key, value = item.split(":")
             data_dict[key.strip()] = value.strip()
-    print(data_dict["Model"])
+    record_test_log(str(data_dict))
     model_name_total = data_dict["Model"].split("/")[0]
     model_name = model_name_total[:6]
     file_name = find_file("D:\\WorkDocument\\CopyRoomSW\\temp\\", model_name,
@@ -88,43 +106,48 @@ def my_function():
 automation自动操控All-300G.exe UI界面控制
 """
 def uiAutomationAll300G(file_name=""):
-    auto.ShowDesktop()
-    # subprocess.Popen('D:\\StudyFolder\\WorkDocument\\Hi-Lo\\ALL-300G\\ALL-300G.exe', shell=True)
-    window = auto.WindowControl(searchDepth=1, Name="ALL-300G")
-    # if not window.Exists(5):
-    #     subprocess.Popen('D:\\WorkDocument\\CopyRoomSW\\Hi-Lo\\ALL-300G\\ALL-300G.exe', shell=True)
-    if not window.Exists():
-        subprocess.Popen('D:\\WorkDocument\\CopyRoomSW\\Hi-Lo\\ALL-300G\\ALL-300G.exe', shell=True)
-    window.SetActive()
-    window.MenuItemControl(searchDepth=3, Name='文件').Click()
-    # 移动鼠标到指定坐标（x=100, y=100）
-    mouse.move(coords=(500, 500))
-    window.MenuItemControl(searchDepth=3, Name="打开工程文件").Click()
-    print("File_name=" + file_name)
-    jobFile = auto.WindowControl(searchDepth=2, Name="打开工程文件")
-    jobFile.EditControl(searchDepth=3, Name='文件名(N):').SendKeys(file_name)
-    jobFile.ButtonControl(searchDepth=3, Name='打开(O)').Click()
-    auto_window = auto.WindowControl(searchDepth=2, Name="自动")
-    if auto_window.Exists(20):
-        time.sleep(2)
-        print("开启Burn exe")
-        uiAutomationBurn();
+    try:
+        auto.ShowDesktop()
+        # subprocess.Popen('D:\\StudyFolder\\WorkDocument\\Hi-Lo\\ALL-300G\\ALL-300G.exe', shell=True)
+        window = auto.WindowControl(searchDepth=1, Name="ALL-300G")
+        # if not window.Exists(5):
+        #     subprocess.Popen('D:\\WorkDocument\\CopyRoomSW\\Hi-Lo\\ALL-300G\\ALL-300G.exe', shell=True)
+        if not window.Exists():
+            subprocess.Popen('D:\\WorkDocument\\CopyRoomSW\\Hi-Lo\\ALL-300G\\ALL-300G.exe', shell=True)
+        window.SetActive()
+        window.MenuItemControl(searchDepth=3, Name='File').Click()
+        # 移动鼠标到指定坐标（x=100, y=100）
+        mouse.move(coords=(500, 500))
+        window.MenuItemControl(searchDepth=3, Name="Open Job File").Click()
+        print("File_name=" + file_name)
+        jobFile = auto.WindowControl(searchDepth=2, Name="Open Job File")
+        jobFile.EditControl(searchDepth=3, Name='檔案名稱(N):').SendKeys(file_name)
+        jobFile.ButtonControl(searchDepth=3, Name='開啟(O)').Click()
+        auto_window = auto.WindowControl(searchDepth=2, Name="Auto")
+        if auto_window.Exists(20):
+            time.sleep(2)
+            print("开启Burn exe")
+            uiAutomationBurn();
+    except Exception as e:
+        record_test_log(str(e))
+
 
 
 """
 automation自动操控Burn.exe UI界面控制
 """
 def uiAutomationBurn():
-    # subprocess.Popen('D:\\WorkDocument\\CopyRoomSW\\Burn_V1.0.1.12 -hl\\Burn\\bin\\Debug\\Burn.exe', shell=True)
-    time.sleep(8)
-    window = auto.WindowControl(searchDepth=1, Name=u" 群沃自动烧录系统")
-    if not window.Exists():
-        subprocess.Popen('D:\\WorkDocument\\CopyRoomSW\\Burn_V1.0.1.12 -hl\\Burn\\bin\\Debug\\Burn.exe', shell=True)
-    window.SetActive()
-    homeBtn = window.ButtonControl(searchDepth=6, AutomationId="but_Homing")
-    if homeBtn.Exists(20):
-        homeBtn.Click()
-        time.sleep(18)
+    try:
+        # subprocess.Popen('D:\\WorkDocument\\CopyRoomSW\\Burn_V1.0.1.12 -hl\\Burn\\bin\\Debug\\Burn.exe', shell=True)
+        print("M/O=" + data_dict["M/O"])
+        print("MO Qty=" + data_dict["MO Qty"])
+        time.sleep(8)
+        window = auto.WindowControl(searchDepth=1, Name=u" 群沃自动烧录系统")
+        if not window.Exists():
+            subprocess.Popen('D:\\WorkDocument\\CopyRoomSW\\Burn_V1.0.1.12 -hl\\Burn\\bin\\Debug\\Burn.exe', shell=True)
+        window.SetActive()
+        window.ButtonControl(searchDepth=6, AutomationId="but_Homing").Click()
+        time.sleep(15)
         window.ButtonControl(searchDepth=6, AutomationId="but_WorkOrder").Click()
         time.sleep(3)
         work_order_name_ed = window.EditControl(searchDepth=7, AutomationId="txt_WorkOrderName")
@@ -143,7 +166,8 @@ def uiAutomationBurn():
         inspectors_ed.SetFocus()
         inspectors_ed.SendKeys("N")
         time.sleep(2)
-
+    except Exception as e:
+        record_test_log(str(e))
 
 if __name__ == "__main__":
     showGetInformationDialog(400, 150)
