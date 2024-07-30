@@ -1,0 +1,5 @@
+2024-07-30 15:03:03.706 UIAutoControl.py[80] controlInfoGet -> Find Control Timeout(10s): {Name: '信息获取', ControlType: WindowControl}
+2024-07-30 15:21:04.111 UIAutoControl.py[51] controlBurn -> Find Control Timeout(10s): {Name: ' 群沃自动烧录系统', ControlType: WindowControl}
+2024-07-30 15:27:43.896 UIAutoControl.py[51] controlBurn -> Find Control Timeout(10s): {Name: ' 群沃自动烧录系统', ControlType: WindowControl}
+2024-07-30 15:33:03.495 UIAutoControl.py[24] controlAll300G -> Find Control Timeout(10s): {Name: 'File', ControlType: MenuItemControl}
+2024-07-30 15:34:13.084 UIAutoControl.py[50] controlBurn -> Find Control Timeout(10s): {Name: ' 群沃自动烧录系统', ControlType: WindowControl}
