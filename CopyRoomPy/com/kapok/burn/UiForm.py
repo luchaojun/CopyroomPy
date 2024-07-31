@@ -258,7 +258,7 @@ class UiForm(object):
         self.setValue()
         model_name = self.data_dict["Model"][:6]
         print("model_name=" + model_name)
-        self.file_name = self.find_file("D:\\WorkDocument\\CopyRoomSW\\temp", model_name,
+        file_count, self.file_name, file_name_list = self.find_file("D:\\WorkDocument\\CopyRoomSW\\temp", model_name,
                                         "---" + self.data_dict["Nameplate"] + "---" + self.data_dict[
                                             "Checksum"] + ".job")
         if self.file_name is None:
@@ -266,6 +266,9 @@ class UiForm(object):
             self.test_log.record_test_log("error message - 沒有找到對應的job文件, 請檢查後重新開始測試!!!!!!!!!, 目前查詢的job檔案的名字(注意開頭六位是模糊查詢)-"+model_name+
                                         "---" + self.data_dict["Nameplate"] + "---" + self.data_dict[
                                             "Checksum"] + ".job")
+        if file_count > 1:
+            self.setErrorMessage("发现多个對應的job文件, 請检查job文件命名!!!")
+            self.test_log.record_test_log("发现多个對應的job文件---"+str(file_name_list))
         else:
             self.pushButton_start.setDisabled(False)
 
@@ -293,11 +296,15 @@ class UiForm(object):
     寻找合适的job file
     """
     def find_file(self, directory, prefix, suffix):
+        file_count = 0
+        file_name_list = []
         for root, dirs, files in os.walk(directory):
             for file in files:
-                if file.startswith(prefix) and file.endswith(suffix):
-                    return os.path.join(root, file)
-        return None
+                if file.startswith(prefix) and file.endswith(suffix) and (not file.endswith("C"+suffix)):
+                    file_count = file_count + 1
+                    file_name = os.path.join(root, file)
+                    file_name_list.append(file_name)
+        return file_count, file_name, file_name_list
 
     """
     显示绘制的页面
