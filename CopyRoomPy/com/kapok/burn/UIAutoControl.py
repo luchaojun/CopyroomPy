@@ -10,12 +10,13 @@ class UIAutoControl:
     """
     def __init__(self, test_log):
         self.test_log = test_log
+        self.uiFormObj = None
 
 
     """
     自动操控All-300G.exe UI界面控制
     """
-    def controlAll300G(self, file_name=""):
+    def controlAll300G(self, file_name="", data_dict={}):
         try:
             auto.ShowDesktop()
             # subprocess.Popen('D:\\StudyFolder\\WorkDocument\\Hi-Lo\\ALL-300G\\ALL-300G.exe', shell=True)
@@ -36,9 +37,8 @@ class UIAutoControl:
             time.sleep(10)
             auto_window = auto.WindowControl(searchDepth=2, Name="Auto")
             if auto_window.Exists():
-                return 1
-            else:
-                return 0
+                self.controlBurn(data_dict)
+
         except Exception as e:
             self.test_log.record_test_log(str(e))
 
@@ -49,11 +49,11 @@ class UIAutoControl:
     def controlBurn(self,data_dict):
         try:
             window = auto.WindowControl(searchDepth=1, Name=u" 群沃自动烧录系统")
-            if not window.Exists(20):
+            if not window.Exists():
                 subprocess.Popen('D:\\WorkDocument\\CopyRoomSW\\Burn_V1.0.1.12 -hl\\Burn\\bin\\Debug\\Burn.exe', shell=True)
             window.SetActive()
             homeBtn = window.ButtonControl(searchDepth=6, AutomationId="but_Homing")
-            if homeBtn.Exists(20):
+            if homeBtn.Exists():
                 homeBtn.Click()
                 time.sleep(18)
                 window.ButtonControl(searchDepth=6, AutomationId="but_WorkOrder").Click()
@@ -78,9 +78,12 @@ class UIAutoControl:
             self.test_log.record_test_log(str(e))
 
 
+    """
+    切换输入法由中文切换成英文
+    """
     def controlInfoGet(self):
-        time.sleep(2)
-        window = auto.WindowControl(searchDepth=1, Name="信息获取")
+        time.sleep(1)
+        window = auto.WindowControl(searchDepth=1, Name="IC Burn Auto")
         window.SetActive()
-        pane = window.PaneControl(searchDepth=3, ClassName="TkChild")
+        pane = window.EditControl(searchDepth=3, AutomationId="Form.lineEdit_mo_value")
         pane.SendKeys("{Shift}")
