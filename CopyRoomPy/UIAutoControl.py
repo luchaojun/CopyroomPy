@@ -2,6 +2,8 @@ import uiautomation as auto
 import subprocess
 import pywinauto.mouse as mouse
 import time
+import tkinter as tk
+from tkinter import messagebox
 
 
 class UIAutoControl:
@@ -19,21 +21,23 @@ class UIAutoControl:
     def controlAll300G(self, file_name="", data_dict={}):
         try:
             auto.ShowDesktop()
-            # subprocess.Popen('D:\\StudyFolder\\WorkDocument\\Hi-Lo\\ALL-300G\\ALL-300G.exe', shell=True)
             window = auto.WindowControl(searchDepth=1, Name="ALL-300G")
-            # if not window.Exists(5):
-            #     subprocess.Popen('D:\\WorkDocument\\CopyRoomSW\\Hi-Lo\\ALL-300G\\ALL-300G.exe', shell=True)
             if not window.Exists():
-                subprocess.Popen('D:\\WorkDocument\\CopyRoomSW\Hi-Lo\\ALL-300G\\ALL-300G.exe', shell=True)
+                # subprocess.Popen('D:\\WorkDocument\\CopyRoomSW\Hi-Lo\\ALL-300G\\ALL-300G.exe', shell=True) #office computer
+                subprocess.Popen('C:\\Program Files (x86)\\Hi-Lo\\ALL-300G\\ALL-300G.exe', shell=True) #SMT computer
             window.SetActive()
-            window.MenuItemControl(searchDepth=3, Name='File').Click()
+            # window.MenuItemControl(searchDepth=3, Name='File').Click()  #office computer
+            window.MenuItemControl(searchDepth=3, Name='文件').Click()  #SMT computer
             # 移动鼠标到指定坐标（x=100, y=100）
             mouse.move(coords=(500, 500))
-            window.MenuItemControl(searchDepth=3, Name="Open Job File").Click()
+            # window.MenuItemControl(searchDepth=3, Name="Open Job File").Click() #office computer
+            window.MenuItemControl(searchDepth=3, Name="打开工程文件").Click() #SMT computer
             print("File_name=" + file_name)
             jobFile = auto.WindowControl(searchDepth=2, Name="Open Job File")
-            jobFile.EditControl(searchDepth=3, Name='檔案名稱(N):').SendKeys(file_name)
-            jobFile.ButtonControl(searchDepth=3, Name='開啟(O)').Click()
+            # jobFile.EditControl(searchDepth=3, Name='檔案名稱(N):').SendKeys(file_name) #office computer
+            jobFile.EditControl(searchDepth=3, Name='文件名(N):').SendKeys(file_name) #SMT computer
+            # jobFile.ButtonControl(searchDepth=3, Name='開啟(O)').Click() #office computer
+            jobFile.ButtonControl(searchDepth=3, Name='打开(O)').Click() #SMT computer
             time.sleep(10)
             auto_window = auto.WindowControl(searchDepth=2, Name="Auto")
             if auto_window.Exists():
@@ -55,25 +59,31 @@ class UIAutoControl:
             homeBtn = window.ButtonControl(searchDepth=6, AutomationId="but_Homing")
             if homeBtn.Exists():
                 homeBtn.Click()
-                time.sleep(18)
+                time.sleep(15)
                 window.ButtonControl(searchDepth=6, AutomationId="but_WorkOrder").Click()
-                time.sleep(3)
+                # time.sleep(3)
                 work_order_name_ed = window.EditControl(searchDepth=7, AutomationId="txt_WorkOrderName")
                 work_order_name_ed.SetFocus()
                 work_order_name_ed.SendKeys(data_dict["M/O"])
-                time.sleep(2)
+                # time.sleep(2)
                 work_order_num_ed = window.EditControl(searchDepth=7, AutomationId="txt_WorkOrderNum")
                 work_order_num_ed.SetFocus()
                 work_order_num_ed.SendKeys(data_dict["MO Qty"])
-                time.sleep(2)
+                # time.sleep(2)
                 operater_ed = window.EditControl(searchDepth=7, AutomationId="txt_Operator")
                 operater_ed.SetFocus()
                 operater_ed.SendKeys("N")
-                time.sleep(2)
+                # time.sleep(2)
                 inspectors_ed = window.EditControl(searchDepth=7, AutomationId="txt_Inspectors")
                 inspectors_ed.SetFocus()
                 inspectors_ed.SendKeys("N")
-                time.sleep(2)
+                # time.sleep(2)
+
+                rootDialog = tk.Tk()
+                rootDialog.withdraw()  # 隐藏主窗口
+                messagebox.showinfo("提示", "IC Burn自動化已經結束, 請手動完成下面其他步驟")
+                rootDialog.destroy()
+                rootDialog.mainloop()
         except Exception as e:
             self.test_log.record_test_log(str(e))
 
