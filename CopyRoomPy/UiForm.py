@@ -312,12 +312,12 @@ class UiForm(object):
                 print("model_name=" + model_name)
                 print(model_name + nameplate + self.data_dict[
                     "Checksum"] + ".job")
-                file_count, self.file_name, file_name_list = self.find_file("D:\\WorkDocument\\CopyRoomSW\\temp", model_name,
-                                                "---" + nameplate, "---" + self.data_dict[
-                                                    "Checksum"] + ".job")    #office Computer
-                # file_count, self.file_name, file_name_list = self.find_file(u"C:\\Users\Group-test\\Desktop\\Debug22.02.17\\烧录软体", model_name,
+                # file_count, self.file_name, file_name_list = self.find_file("D:\\WorkDocument\\CopyRoomSW\\temp", model_name,
                 #                                 "---" + nameplate, "---" + self.data_dict[
-                #                                     "Checksum"] + ".job")    #SMT Computer
+                #                                     "Checksum"] + ".job")    #office Computer
+                file_count, self.file_name, file_name_list = self.find_file(u"C:\\Users\Group-test\\Desktop\\Debug22.02.17\\烧录软体", model_name,
+                                                "---" + nameplate, "---" + self.data_dict[
+                                                    "Checksum"] + ".job")    #SMT Computer
                 if self.file_name is None:
                     self.setErrorMessage("沒有找到對應的job文件, 請檢查後重新開始測試!!!!!!!!!")
                     self.test_log.record_test_log("error message - 沒有找到對應的job文件, 請檢查後重新開始測試!!!!!!!!!, 目前查詢的job檔案的名字(注意開頭六位是模糊查詢)-"+model_name+
@@ -329,6 +329,7 @@ class UiForm(object):
                         self.test_log.record_test_log("发现多个對應的job文件---"+str(file_name_list))
                     else:
                         self.pushButton_start.setDisabled(False)
+                        self.test_log.record_test_log(str(self.data_dict))
         except Exception as e:
             self.setErrorMessage("尋找文件時發生異常, 請確保帶入的IC Burn Label信息無異常!!!")
             print("on_return_pressed,exception="+str(e))
