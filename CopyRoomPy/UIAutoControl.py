@@ -39,7 +39,7 @@ class UIAutoControl:
             # jobFile.ButtonControl(searchDepth=3, Name='開啟(O)').Click() #office computer
             jobFile.ButtonControl(searchDepth=3, Name='打开(O)').Click() #SMT computer
             # auto_window = auto.WindowControl(searchDepth=2, Name="Auto") #office computer
-            time.sleep(2)
+            time.sleep(4)
             auto_window = auto.WindowControl(searchDepth=2, Name="自动") #SMT computer
             if auto_window.Exists():
                 self.controlBurn(data_dict)
@@ -82,9 +82,20 @@ class UIAutoControl:
                 inspectors_ed.SendKeys(u"张玉敏")
                 # time.sleep(2)
 
+                checksum_ed = window.EditControl(searchDepth=7, AutomationId="txt_CheckSum")
+                checksum_burn = checksum_ed.GetLegacyIAccessiblePattern().Value;
+                self.test_log.record_test_log("checksum_burn="+str(checksum_burn))
+
+
+                check_sum = data_dict["Checksum"]
+                self.test_log.record_test_log("checksum_label=" + str(check_sum))
+
                 rootDialog = tk.Tk()
                 rootDialog.withdraw()  # 隐藏主窗口
-                messagebox.showinfo("提示", "IC Burn自動化已經結束, 請手動完成下面其他步驟")
+                if(checksum_burn.endswith(check_sum)):
+                    messagebox.showinfo("提示", "Checksum值比對一致, IC Burn自動化已經結束, 請手動完成下面其他步驟")
+                else:
+                    messagebox.showerror("警告", "Checksum值比對不一致, 請檢查job檔案")
                 rootDialog.destroy()
                 rootDialog.mainloop()
         except Exception as e:

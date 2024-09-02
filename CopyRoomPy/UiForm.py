@@ -206,8 +206,8 @@ class UiForm(object):
                                                     "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt;\"><br/></span></p></body></html>"))
         self.lineEdit_reelqty.setText(_translate("Form", "   Reel Qty"))
         self.lineEdit_reelqty.setDisabled(True)
-        self.label_2.setText(_translate("Form",
-                                        "<html><head/><body><p><span style=\" font-size:20pt;\">錯誤信息:</span></p></body></html>"))
+        # self.label_2.setText(_translate("Form",
+        #                                 "<html><head/><body><p><span style=\" font-size:20pt;\">錯誤信息:</span></p></body></html>"))
         self.textEdit.setHtml(_translate("Form",
                                          "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
                                          "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
